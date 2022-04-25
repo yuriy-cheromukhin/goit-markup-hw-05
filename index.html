@@ -20,6 +20,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
+  <script src="./js/modal.js"></script>
   <body>
     <!-- /* ----------HEADER---------- */ -->
     <header class="header">
@@ -59,7 +60,16 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button type="button" class="hero-btn">Заказать услугу</button>
+          <button class="hero-btn" data-modal-open>Заказать услугу</button>
+          <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+              <button class="modal-close" data-modal-close>
+                <svg class="workers-soc-icon" width="18" height="18">
+                  <use href="./images/icons/symbol-defs.svg#icon-close-black-18dp-2-1"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </section>
       <!-- /* ----------BENEFITS---------- */ -->
@@ -121,7 +131,12 @@
           <h2 class="about-title">Чем мы занимаемся</h2>
           <ul class="abot-list list">
             <li class="about-list-item">
-              <img src="./images/img-1.jpg" alt="програміст пише код" width="370" height="294" />
+              <div class="thumb">
+                <img src="./images/img-1.jpg" alt="програміст пише код" width="370" height="294" />
+                <div class="about-list-overlay">
+                  <h3 class="about-pre-title">Десктопные приложения</h3>
+                </div>
+              </div>
             </li>
             <li class="about-list-item">
               <div class="thumb">
@@ -131,15 +146,23 @@
                   width="370"
                   height="294"
                 />
+                <div class="about-list-overlay">
+                  <h3 class="about-pre-title">Мобильные приложения</h3>
+                </div>
               </div>
             </li>
             <li class="about-list-item">
-              <img
-                src="./images/img-3.jpg"
-                alt="програміст обирає колір з палітри"
-                width="370"
-                height="294"
-              />
+              <div class="thumb">
+                <img
+                  src="./images/img-3.jpg"
+                  alt="програміст обирає колір з палітри"
+                  width="370"
+                  height="294"
+                />
+                <div class="about-list-overlay">
+                  <h3 class="about-pre-title">Дизайнерские решения</h3>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
